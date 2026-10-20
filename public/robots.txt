@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://proyectsvicho.github.io/encapsulados-con-amor-/sitemap.xml
