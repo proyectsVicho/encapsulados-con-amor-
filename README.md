@@ -1,30 +1,25 @@
 # Encapsulados con Amor
 
-Web estática de la marca en Rancagua, Chile. Diseño y desarrollo: Hermor.cl.
+Web pública: https://proyectsvicho.github.io/encapsulados-con-amor-/
 
-**Web pública:** https://proyectsvicho.github.io/encapsulados-con-amor-/
+GitHub Pages publica la **raíz de `main`**. `index.html`, `assets/`, `favicon.svg`, `robots.txt` y `sitemap.xml` son la versión compilada. El proyecto editable está en [`site-source/`](site-source/), junto con las fotografías, el logotipo, las ilustraciones, las tipografías y sus licencias.
 
-## Desarrollo local
-
-Requiere Node.js 22.18+.
+Para modificar la web, se requiere Node.js 22.18+:
 
 ```sh
+cd site-source
 npm ci
 npm run dev
 ```
 
-Para generar la versión que publica GitHub Pages:
+Al terminar, generar y copiar la web compilada a la raíz:
 
 ```sh
-npm run build
+npm run publish:root
 ```
 
-El workflow de `.github/workflows/pages.yml` publica automáticamente `dist/` al actualizar la rama `main`. Las fotografías, el logo, las ilustraciones y las tipografías se guardan en `public/assets/` y se publican con el sitio. No hacen falta servicios de pago para mostrar este catálogo estático.
+Después, confirmar los cambios en Git y subirlos a `main`. GitHub Pages publicará la nueva versión automáticamente. El flujo de GitHub Actions verifica que el código fuente siga compilando.
 
-## Alcance
+La web muestra siete productos del catálogo de Encapsulados con Amor en Rancagua. Los precios y la disponibilidad se confirman al consultar. El formulario prepara un mensaje para Instagram; no almacena pedidos ni procesa pagos. El enlace directo de WhatsApp espera el número oficial en `site-source/src/business.js`.
 
-Catálogo visual, buscador, fichas de producto, preguntas frecuentes, formulario que prepara una consulta, Instagram y mapa de la zona de Rancagua. Los pedidos se coordinan fuera del sitio; la web no cobra ni almacena datos personales.
-
-Los precios proceden del catálogo público de la marca y deben confirmarse al consultar. El botón de WhatsApp se activa al configurar el número oficial en `src/business.js`; hasta entonces no se publica un número supuesto.
-
-El catálogo y las imágenes pertenecen a Encapsulados con Amor. Las licencias de las tipografías están junto a los archivos en `public/assets/`.
+Diseño y desarrollo: Hermor.cl. Las imágenes de marca pertenecen a Encapsulados con Amor; las licencias de las fuentes están en `site-source/public/assets/`.
